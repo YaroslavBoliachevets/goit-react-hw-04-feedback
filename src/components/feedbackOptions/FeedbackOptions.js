@@ -1,42 +1,77 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { ButtonList, FeedbackButton } from './FeedbackOptions.styled';
 
-class FeedbackOptions extends Component {
+// class FeedbackOptions extends Component {
 
-  render() {
-    return (
-      <ButtonList>
-        <li>
-          <FeedbackButton
-            name="good"
-            type="button"
-            onClick={(e) => {this.props.onLeaveFeedback(e)}}
-          >
-            Good
-          </FeedbackButton>
-        </li>
-        <li>
-          <FeedbackButton
-            name="neutral"
-            type="button"
-            onClick={(e) => {this.props.onLeaveFeedback(e)}}
-          >
-            Neutral
-          </FeedbackButton>
-        </li>
-        <li>
-          <FeedbackButton
-            name="bad"
-            type="button"
-            onClick={(e) => {this.props.onLeaveFeedback(e)}}
-          >
-            Bad
-          </FeedbackButton>
-        </li>
-      </ButtonList>
-    );
-  }
+//   render() {
+//     return (
+//       <ButtonList>
+//         <li>
+//           <FeedbackButton
+//             name="good"
+//             type="button"
+//             onClick={(e) => {this.props.onLeaveFeedback(e)}}
+//           >
+//             Good
+//           </FeedbackButton>
+//         </li>
+//         <li>
+//           <FeedbackButton
+//             name="neutral"
+//             type="button"
+//             onClick={(e) => {this.props.onLeaveFeedback(e)}}
+//           >
+//             Neutral
+//           </FeedbackButton>
+//         </li>
+//         <li>
+//           <FeedbackButton
+//             name="bad"
+//             type="button"
+//             onClick={(e) => {this.props.onLeaveFeedback(e)}}
+//           >
+//             Bad
+//           </FeedbackButton>
+//         </li>
+//       </ButtonList>
+//     );
+//   }
+// }
+
+function FeedbackOptions({onLeaveFeedback}) {
+
+  return (
+    <ButtonList>
+      <li>
+        <FeedbackButton
+          name="good"
+          type="button"
+          onClick={(event) => {onLeaveFeedback(event)}}
+        >
+          Good
+        </FeedbackButton>
+      </li>
+      <li>
+        <FeedbackButton
+          name="neutral"
+          type="button"
+          onClick={(event) => {onLeaveFeedback(event)}}
+        >
+          Neutral
+        </FeedbackButton>
+      </li>
+      <li>
+        <FeedbackButton
+          name="bad"
+          type="button"
+          onClick={(event) => {onLeaveFeedback(event)}}
+        >
+          Bad
+        </FeedbackButton>
+      </li>
+    </ButtonList>
+  );
 }
 
 export default FeedbackOptions;
@@ -44,3 +79,8 @@ export default FeedbackOptions;
 FeedbackOptions.propTypes = {
   onLeaveFeedback: PropTypes.func,
 }
+
+
+// function FeedbackOptions1() {
+
+// }
